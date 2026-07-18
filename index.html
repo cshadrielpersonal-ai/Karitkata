@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karikata boys Hub</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #1e1e2f; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            background-color: #282a36; 
+            padding: 20px; 
+            text-align: center; 
+            border-bottom: 3px solid #ff79c6; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 30px auto; 
+            padding: 20px; 
+        }
+        .card { 
+            background-color: #282a36; 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+        }
+        .grid-crew {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .member-card {
+            background-color: #3d3f4d;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #44475a;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #282a36;
+            border: 2px solid #ff79c6;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #8be9fd;
+        }
+        input[type="text"], textarea { 
+            padding: 10px; 
+            border-radius: 5px; 
+            border: none; 
+            width: 100%; 
+            box-sizing: border-box;
+            background-color: #44475a;
+            color: white;
+            font-size: 16px;
+        }
+        textarea { resize: vertical; height: 60px; }
+        button { 
+            padding: 10px 20px; 
+            background-color: #ff79c6; 
+            color: #1e1e2f; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            font-size: 16px;
+        }
+        button:hover { background-color: #ff92d0; }
+        .admin-badge {
+            background-color: #50fa7b;
+            color: #282a36;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .desc-text {
+            color: #bd93f9;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .output-box {
+            background-color: #1e1e2f;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #f1fa8c;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: none;
+            margin-top: 15px;
+            border: 1px dashed #ff79c6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>⚫ Karikata boys Hub</h1>
+        <p>The Official Crew Dashboard</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Interactive Crew Showcase -->
+        <div class="card">
+            <h2>👥 The Crew Roster</h2>
+            <p>Everyone's customized profiles appear live here:</p>
+            
+            <div class="grid-crew" id="crewContainer">
+                
+                <!-- MEMBER 1: HADRIEL -->
+                <div class="member-card" id="mem-hadriel">
+                    <img class="profile-pic" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff79c6'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
+                    <h3>Hadriel</h3>
+                    <span class="admin-badge" style="background-color: #8be9fd;">Creator</span>
+                    <p class="desc-text">Managing the hub website.</p>
+                </div>
+
+                <!-- MEMBER 2: SREEHARI -->
+                <div class="member-card" id="mem-sreehari">
+                    <img class="profile-pic" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2350fa7b'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
+                    <h3>Sreehari</h3>
+                    <span class="admin-badge">Group Admin</span>
+                    <p class="desc-text">Group Administrator</p>
+                </div>
+
+                <!-- QUICK PLACES FOR THE REST OF THE BOYS -->
+                <div class="member-card" id="mem-arnav"><h3>Arnav Sijil</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-asthatah"><h3>Asthatah</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-samuel"><h3>CS Samuel</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-jovan"><h3>Jovan Jijo</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-nevion"><h3>Nevion Sony</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-rehan"><h3>Rehan</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-siddharth"><h3>Siddharth (Siddhu❤️)</h3><p class="desc-text">Squad Member</p></div>
+                <div class="member-card" id="mem-vahin"><h3>Vahin Raj</h3><p class="desc-text">Squad Member</p></div>
+
+                <!-- NEW/UPDATED CUSTOM MEMBERS WILL AUTOMATICALLY HIGHLIGHT HERE -->
+
+            </div>
+        </div>
+
+        <!-- Profile Code Generator Section -->
+        <div class="card">
+            <h3>⚙️ Custom Profile Generator</h3>
+            <p>Want to completely change your card above? Fill this out, generate your profile update code, and send it to Hadriel!</p>
+            
+            <div class="form-group">
+                <label>Select Your Identity Name:</label>
+                <!-- Matches the exact IDs from the list above -->
+                <select id="memberSelect" style="width: 100%; padding: 10px; background-color: #44475a; color: white; border-radius: 5px; border: none; font-size: 16px;">
+                    <option value="hadriel">Hadriel</option>
+                    <option value="sreehari">Sreehari</option>
+                    <option value="arnav">Arnav Sijil</option>
+                    <option value="asthatah">Asthatah</option>
+                    <option value="samuel">CS Samuel</option>
+                    <option value="jovan">Jovan Jijo</option>
+                    <option value="nevion">Nevion Sony</option>
+                    <option value="rehan">Rehan</option>
+                    <option value="siddharth">Siddharth (Siddhu)</option>
+                    <option value="vahin">Vahin Raj</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="newName">Custom Display Name:</label>
+                <input type="text" id="newName" placeholder="Type what you want your name to say...">
+            </div>
+
+            <div class="form-group">
+                <label for="newDesc">Custom Description:</label>
+                <textarea id="newDesc" placeholder="Bio, gaming tags, quotes..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="newImg">Profile Photo:</label>
+                <input type="file" id="newImg" accept="image/*">
+            </div>
+
+            <button onclick="generateProfileCode()">Generate Profile Code</button>
+
+            <div id="codeOutput" class="output-box"></div>
+        </div>
+
+    </div>
+
+    <!-- DATA REGISTRY: This is where updates get inserted permanently -->
+    <script>
+        // --- CUSTOM SQUAD PROFILE DATA REGISTRY ---
+        // When your friends send you their generated update blocks, paste them right below this line:
+        
+        // --- END OF REGISTRY ---
+
+        // Automated function to inject custom profiles over the defaults
+        if (typeof squadUpdates !== 'undefined') {
+            Object.keys(squadUpdates).forEach(id => {
+                let targetCard = document.getElementById('mem-' + id);
+                if (targetCard) {
+                    let imgHtml = squadUpdates[id].img ? `<img class="profile-pic" src="${squadUpdates[id].img}">` : `<img class="profile-pic" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ccc'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">`;
+                    let badgeHtml = id === 'sreehari' ? '<br><span class="admin-badge">Group Admin</span>' : id === 'hadriel' ? '<br><span class="admin-badge" style="background-color: #8be9fd;">Creator</span>' : '';
+                    
+                    targetCard.innerHTML = `
+                        ${imgHtml}
+                        <h3>${squadUpdates[id].name}</h3>
+                        ${badgeHtml}
+                        <p class="desc-text">${squadUpdates[id].desc}</p>
+                    `;
+                }
+            });
+        }
+
+        // Logic to build the code updates
+        function generateProfileCode() {
+            let selectId = document.getElementById('memberSelect').value;
+            let name = document.getElementById('newName').value || document.getElementById('memberSelect').options[document.getElementById('memberSelect').selectedIndex].text;
+            let desc = document.getElementById('newDesc').value || "Squad Member";
+            let imgFile = document.getElementById('newImg').files[0];
+
+            let processCode = (imgData) => {
+                let safeName = name.replace(/"/g, '\\"');
+                let safeDesc = desc.replace(/"/g, '\\"');
+                let outputElement = document.getElementById('codeOutput');
+                
+                outputElement.style.display = "block";
+                outputElement.innerText = `// Copy and add this line inside the script tag registry:\nwindow.squadUpdates = window.squadUpdates || {}; window.squadUpdates["${selectId}"] = { name: "${safeName}", desc: "${safeDesc}", img: "${imgData || ''}" };`;
+            };
+
+            if (imgFile) {
+                let reader = new FileReader();
+                reader.onloadend = function() { processCode(reader.result); }
+                reader.readAsDataURL(imgFile);
+            } else {
+                processCode("");
+            }
+        }
+    </script>
+
+</body>
+</html>
